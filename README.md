@@ -8,7 +8,7 @@ interactive, but you can set `GOLDEN_MASTER=nointeract` to disable interactive r
 ## Usage
 
 ```janet
-(use testament) # Currently uses 
+(use testament)
 (import golden-master :as "gold")
 
 # Set the directory for acceptance tests to record their results to.
@@ -16,11 +16,10 @@ interactive, but you can set `GOLDEN_MASTER=nointeract` to disable interactive r
 # so as to be platform independent
 (gold/set-dir "test" "records") 
 
-(defsuite! 
+(exercise! 
   (deftest html-one
     (def to-compare "<html>This is some testing</html>")
-    # Firest test always passes, the foll
+    # First test always passes, if the output changes, the user will be prompted to view differences
     (assert-equal true (gold/compare :text "test1.html" to-compare))))
-
 ```
 

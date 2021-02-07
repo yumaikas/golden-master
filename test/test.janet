@@ -3,7 +3,7 @@
 
 (gold/set-dir "test" "records")
 
-(defsuite!
+(exercise! []
   (deftest master-test
     (assert-equal true (gold/compare :text "test1" "test1.txt" "This is a test!\nWith more changes!\nMore lines\n more testing\n\na print farm\n"))))
 

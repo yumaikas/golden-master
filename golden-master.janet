@@ -2,6 +2,7 @@
 (import err)
 (import tempfiles :as temp)
 
+# task[Add an :html diff viewer to this based on frames/osprey/browsers]
 (var *dir* "")
 
 (defn set-dir [& dirs] 
